@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f4f4f9;
+}      
+
+section {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c502e;
+    border-bottom: 2px solid #2c503d;
+    padding-bottom: 5px;
+}
+
+a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+}
+
+a:hover {
+            background-color: #2980b9;
+}

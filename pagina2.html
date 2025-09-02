@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+    <title>Calendario de Actividades</title>
+
+<style>
+  .boton-inquilinos {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #23d744;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px auto;
+    cursor: pointer;
+  }
+  
+  .boton-inquilinos:hover {
+    background-color: #11af06;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+</style>
+
+</head>
+<body>
+    
+    <div style="max-width: 1000px; margin: auto" id='calendar'></div>
+    <script src="./calendar.js"></script>
+
+    <footer>
+      <a href="pagina3.php" class="boton-inquilinos">Consulta de Inquilinos</a>
+    </footer>
+</body>
+</html>
