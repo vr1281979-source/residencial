@@ -69,8 +69,7 @@
 
     <nav>
         <ul>
-            <li><a href="pagina1.php">Inicio</a></li>
-
+            <li><a href="index.html">Inicio</a></li>
         </ul>
     </nav>
 
@@ -101,40 +100,30 @@
         </iframe>
     </section>
 
-    <!-- Sección de Noticias -->
+    <!-- Sección de Noticias (estática) -->
     <section id="noticias">
         <h2>Noticias Recientes</h2>
-        <?php
-        $conn = new mysqli("localhost", "desarrollo_web", "@Starks2025", "desarrollo_web");
 
-        if ($conn->connect_error) {
-            die("Error de conexión: " . $conn->connect_error);
-        }
+        <div class="noticia">
+            <img src="https://via.placeholder.com/600x300" alt="Imagen noticia 1">
+            <h3>Fiesta de la Independencia</h3>
+            <small>15/09/2025</small>
+            <p>El residencial celebró el Día de la Independencia con actividades culturales y música en vivo.</p>
+        </div>
 
-        $sql = "SELECT titulo, contenido, fecha_publicacion, imagen 
-                FROM noticias 
-                ORDER BY fecha_publicacion DESC 
-                LIMIT 3";
+        <div class="noticia">
+            <img src="https://via.placeholder.com/600x300" alt="Imagen noticia 2">
+            <h3>Mantenimiento de Ascensores</h3>
+            <small>20/09/2025</small>
+            <p>Se realizará mantenimiento preventivo en los ascensores de la torre principal.</p>
+        </div>
 
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<div class='noticia'>";
-                if (!empty($row['imagen'])) {
-                    echo "<img src='" . $row['imagen'] . "' alt='Imagen de noticia'>";
-                }
-                echo "<h3>" . $row['titulo'] . "</h3>";
-                echo "<small>" . date("d/m/Y", strtotime($row['fecha_publicacion'])) . "</small>";
-                echo "<p>" . $row['contenido'] . "</p>";
-                echo "</div>";
-            }
-        } else {
-            echo "<p>No hay noticias disponibles.</p>";
-        }
-
-        $conn->close();
-        ?>
+        <div class="noticia">
+            <img src="https://via.placeholder.com/600x300" alt="Imagen noticia 3">
+            <h3>Reunión de Vecinos</h3>
+            <small>18/09/2025</small>
+            <p>Invitamos a todos los vecinos a la reunión en el salón comunal para tratar temas de seguridad.</p>
+        </div>
     </section>
 
     <footer>
@@ -142,3 +131,4 @@
     </footer>
 </body>
 </html>
+
